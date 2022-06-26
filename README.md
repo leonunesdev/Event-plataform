@@ -19,6 +19,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 Você pode visualizar o layout do projeto através <a href="https://www.figma.com/community/file/1120711251998877938">desse link</a>. É necessário ter conta no <a href="https://www.figma.com/files/recent?fuid=1102968563677691331">Figma</a> para acessá-lo.
 
 ## 📝 Licença
-Esse projeto está sob a licença MIT. Veja o arquivo <a href="https://github.com/leonunesdev/Event-plataform/blob/main/LICENSE"></a>
+Esse projeto está sob a licença MIT. Veja o arquivo <a href="https://github.com/leonunesdev/Event-plataform/blob/main/LICENSE">LICENSE</a> para mais detalhes.
 <hr>
 Feito com 💜 by Leandro Nunes 👋
