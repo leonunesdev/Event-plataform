@@ -17,7 +17,7 @@ export function Video(props: VideoProps) {
 
   if (!data || !data.lesson) {
     return (
-      <div className="flex-1">
+      <div className="flex-1 mobile:z-0 desktop:z-[1]">
         <p>Carregando...</p>
       </div>
     )
@@ -35,9 +35,9 @@ export function Video(props: VideoProps) {
       </div>
 
       <div className="p-8 max-w-[1100px] mx-auto">
-        <div className="flex items-start gap-16">
+        <div className="flex desktop:flex-row desktop:items-start mobile:flex-col mobile:items-center gap-16">
           <div className="flex-1">
-            <h1 className="text-2xl font-bold">
+            <h1 className="mobile:text-[1.3rem] laptop:text-2xl font-bold">
               {data.lesson.title}
             </h1>
             <p className="mt-4 text-gray-200 leading-relaxed">
@@ -45,7 +45,7 @@ export function Video(props: VideoProps) {
             </p>
 
             {data.lesson.teacher && (
-              <div className="flex items-center gap-4 mt-6">
+              <div className="flex items-center desktop:justify-start mobile:justify-center gap-4 mt-6">
                 <img
                   className="h-16 w-16 rounded-full border-2 border-blue-500"
                   src={data.lesson.teacher.avatarURL}
@@ -73,18 +73,20 @@ export function Video(props: VideoProps) {
           </div>
         </div>
 
-        <div className="gap-8 mt-20 grid grid-cols-2">
+        <div className="gap-8 mt-20 grid mobile:grid-rows-2 desktop:grid-cols-2">
           <a href="" className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors">
             <div className="bg-blue-400 h-full p-6 flex items-center">
               <FileArrowDown size={40} />
             </div>
             <div className="py-6 leading-relaxed">
-              <strong className="text-2xl">Material complementar</strong>
+              <strong className="mobile:text-lg laptop:text-xl desktoplarge:text-2xl">
+                Material complementar
+              </strong>
               <p className="text-sm text-gray-200 mt-2">
                 Acesse o material complementar para acelerar o seu desenvolvimento
               </p>
             </div>
-            <div className="h-full p-6 flex items-center">
+            <div className="h-full mobile:p-1 desktop:p-2 desktoplarge:p-6 flex items-center">
               <CaretRight size={24} />
             </div>
           </a>
@@ -94,12 +96,14 @@ export function Video(props: VideoProps) {
               <FileArrowDown size={40} />
             </div>
             <div className="py-6 leading-relaxed">
-              <strong className="text-2xl">Wallpapers exclusivos</strong>
+              <strong className="mobile:text-lg laptop:text-xl desktoplarge:text-2xl">
+                Wallpapers exclusivos
+              </strong>
               <p className="text-sm text-gray-200 mt-2">
                 Baixe wallpapers exclusivos do Ignite Lab e personalize a sua máquina
               </p>
             </div>
-            <div className="h-full p-6 flex items-center">
+            <div className="h-full mobile:p-2 desktop:p-2 desktoplarge:p-6 flex items-center">
               <CaretRight size={24} />
             </div>
           </a>

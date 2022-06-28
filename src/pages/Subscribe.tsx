@@ -1,9 +1,7 @@
-import { gql, useMutation } from "@apollo/client";
 import { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Logo } from "../components/Logo";
 import { useCreateSubscriberMutation } from "../graphql/generated";
-
 
 
 export function Subscribe() {
@@ -28,19 +26,21 @@ export function Subscribe() {
   }
 
   return (
-    <div className="min-h-screen bg-blur bg-cover bg-no bg-repeat flex flex-col items-center">
-      <div className="w-full max-w-[1100px] flex items-center justify-between mt-20 mx-auto">
-        <div className="mx-w[640px]">
-          <Logo />
+    <div className="min-h-screen bg-blur bg-cover bg-no bg-repeat flex flex-col items-center desktop:px-6">
+      <div className="w-full max-w-[1100px] flex mobile:flex-col mobile:items-stretch desktop:flex-row desktop:items-center justify-between mt-20 mx-auto">
+        <div className="mobile:flex mobile:flex-col mobile:mb-8 mobile:px-8 mobile:text-center desktop:max-w-[620px] desktop:mb-0 desktop:px-0 desktop:text-start">
+          <div className="mobile:mx-auto desktop:mx-0">
+            <Logo />
+          </div>
 
-          <h1 className="mt-8 text-[2.5rem] leading-tight">Construa uma <strong className="text-blue-500">aplicação completa</strong>,<br></br>  do zero, com <strong className="text-blue-500">React</strong>
+          <h1 className="mobile:text-4x1 mt-8 laptop:text-[2.5rem] leading-tight">Construa uma <strong className="text-blue-500">aplicação completa</strong>,<br />  do zero, com <strong className="text-blue-500">React</strong>
           </h1>
           <p className="mt-4 text-gray-200 leading-relaxed">Em apenas uma semana você vai dominar na prática uma das tecnologias mais <br /> utilizadas e com alta demanda para acessar as melhores oportunidades do mercado.
           </p>
         </div>
 
         <div className="p-8 bg-gray-700 border border-gray-500 rounded">
-          <strong className="text-2xl mb-6 block">Inscreva-se gratuitamente</strong>
+          <strong className="mobile:text-lg laptop:text-[1.4rem] mb-6 block">Inscreva-se gratuitamente</strong>
 
           <form onSubmit={handleSubscribe} className="flex flex-col gap-2 w-full">
             <input
